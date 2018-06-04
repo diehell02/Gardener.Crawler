@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Gardener.Crawler.Client.UWP.Views.RecentPost"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Gardener.Crawler.Client.UWP.Controls"
+    xmlns:entity="using:Gardener.Crawler.Api.Entity"
+    xmlns:style="using:Gardener.Crawler.Client.UWP.Styles"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Grid_Loaded" SizeChanged="Grid_SizeChanged">
+        <Border Name="ItemBridge"></Border>
+        <ProgressBar Name="ListProgressBar" IsIndeterminate="True" Width="80" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" ></ProgressBar>
+        <controls:RefreshableListView x:Name="WorkListBox" Canvas.ZIndex="0" AutoRefresh="False"
+                                      ItemsSource="{Binding}" 
+                                      ItemClick="WorkListBox_ItemClick"
+                                      SelectionMode="None"
+                                      IsItemClickEnabled="True" 
+                                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                      Loaded="WorkListBox_Loaded"
+                                      RefreshRequested="WorkListBox_RefreshRequested">
+            <controls:RefreshableListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid x:Name="ListViewWrapGrid" Orientation="Horizontal"
+                              ItemWidth="{Binding ElementName=ItemBridge, Path=Width}" ItemHeight="{Binding ElementName=ItemBridge, Path=Height}"></WrapGrid>
+                </ItemsPanelTemplate>
+            </controls:RefreshableListView.ItemsPanel>
+            <controls:RefreshableListView.ItemTemplate>
+                <DataTemplate x:DataType="entity:Gallery">
+                    <Grid>
+                        <Image Source="{x:Bind Picture}" Canvas.ZIndex="0" Stretch="Uniform" x:Phase="1"></Image>
+                        <Border Padding="5,0" Background="Pink" Canvas.ZIndex="1" Width="Auto" Height="30" VerticalAlignment="Bottom">
+                            <TextBlock Name="Title" Text="{x:Bind Title}" FontWeight="Bold" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </controls:RefreshableListView.ItemTemplate>
+        </controls:RefreshableListView>
+    </Grid>
+</Page>

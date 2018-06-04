@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Gardener.Crawler.Client.UWP.Views.ImageViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gardener.Crawler.Client.UWP.Views"
+    xmlns:controls="using:Gardener.Crawler.Client.UWP.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <CommandBar Grid.Row="1">
+            <AppBarButton Name="DownloadAppBarButton" Icon="Download" Label="下载" Click="DownloadAppBarButton_Click"></AppBarButton>
+        </CommandBar>
+        <FlipView Grid.Row="0" Name="PhotosFlipView" ItemsSource="{Binding Photos,Mode=OneTime}">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <controls:ScalableGrid Background="Gray">
+                        <Image Source="{Binding}" ImageOpened="Image_ImageOpened"></Image>
+                    </controls:ScalableGrid>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>        
+    </Grid>
+</Page>

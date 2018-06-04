@@ -1,0 +1,268 @@
+﻿{
+  "Pages": [
+    {
+      "PageType": "BCY_AllWork",
+      "UseProxy": "false",
+      "Rules": [
+        {
+          "Name": "Gallery",
+          "XPath": "//ul[@id='imageCards']/li[@class='_box']",
+          "Fun": "Nodes",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Address",
+          "XPath": "./a",
+          "Fun": "Attr",
+          "Param": "href"
+        },
+        {
+          "Name": "Gallery.Originality",
+          "XPath": "",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Role",
+          "XPath": "",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Title",
+          "XPath": "./div[@class='work-thumbnail__bd']/a",
+          "Fun": "Attr",
+          "Param": "title"
+        },
+        {
+          "Name": "Gallery.Picture",
+          "XPath": "./a/div[@class='posr']/img",
+          "Fun": "Attr",
+          "Param": "src"
+        },
+        {
+          "Name": "Gallery.Author.Address",
+          "XPath": "./div[@class='l-clearfix ph10 pt8 fz0']/a[@class='name']",
+          "Fun": "Attr",
+          "Param": "href"
+        },
+        {
+          "Name": "Gallery.Name",
+          "XPath": "./div[@class='l-clearfix ph10 pt8 fz0']/a[@class='name']/span",
+          "Fun": "Text",
+          "Param": ""
+        }
+      ]
+    },
+    {
+      "PageType": "BCY_Images",
+      "UseProxy": "false",
+      "Rules": [
+        {
+          "Name": "CoserName",
+          "XPath": "//div[@class='mb10 dib']/a",
+          "Fun": "Attr",
+          "Param": "title"
+        },
+        {
+          "Name": "Title",
+          "XPath": "//h1[@class='js-post-title']",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Role",
+          "XPath": "//div[@class='post__role post__info-group']",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Staff",
+          "XPath": "//div[@class='post__staff post__info-group']",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Content",
+          "XPath": "//div[@class='post__content js-content-img-wrap js-fullimg js-maincontent mb0 pl0 pr0 l-left w650']",
+          "Fun": "Node",
+          "Param": ""
+        },
+        {
+          "Name": "Image",
+          "XPath": "//img[@class='detail_std detail_clickable']",
+          "Fun": "Nodes",
+          "Param": ""
+        },
+        {
+          "Name": "Image.Src",
+          "XPath": ".",
+          "Fun": "Attr",
+          "Param": "src"
+        }
+      ]
+    },
+    {
+      "PageType": "BCY_TopPost",
+      "UseProxy": "false",
+      "Rules": [
+        {
+          "Name": "Gallery",
+          "XPath": "//ul[@class='l-clearfix gridList workImageCards js-workTopList']/li[@class='_box']",
+          "Fun": "Nodes",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Address",
+          "XPath": "./a",
+          "Fun": "Attr",
+          "Param": "href"
+        },
+        {
+          "Name": "Gallery.Originality",
+          "XPath": "",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Role",
+          "XPath": "",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Title",
+          "XPath": "./a",
+          "Fun": "Attr",
+          "Param": "title"
+        },
+        {
+          "Name": "Gallery.Picture",
+          "XPath": "./a/div[@class='posr']/img",
+          "Fun": "Attr",
+          "Param": "src"
+        },
+        {
+          "Name": "Gallery.Author.Address",
+          "XPath": "./div[@class='l-clearfix ph10 pt8 fz0']/a[@class='name']",
+          "Fun": "Attr",
+          "Param": "href"
+        },
+        {
+          "Name": "Gallery.Name",
+          "XPath": "./div[@class='l-clearfix ph10 pt8 fz0']/a[@class='name']/span",
+          "Fun": "Text",
+          "Param": ""
+        }
+      ]
+    },
+    {
+      "PageType": "BCY_Discover",
+      "UseProxy": "false",
+      "Rules": [
+        {
+          "Name": "Gallery",
+          "XPath": "//ul[@class='js-coserIndexList l-clearfix gridList workImageCards']/li[@class='_box']",
+          "Fun": "Nodes",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Address",
+          "XPath": "./a",
+          "Fun": "Attr",
+          "Param": "href"
+        },
+        {
+          "Name": "Gallery.Originality",
+          "XPath": "",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Role",
+          "XPath": "",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Title",
+          "XPath": "./a",
+          "Fun": "Attr",
+          "Param": "title"
+        },
+        {
+          "Name": "Gallery.Picture",
+          "XPath": "./a/div[@class='posr']/img",
+          "Fun": "Attr",
+          "Param": "src"
+        },
+        {
+          "Name": "Gallery.Author.Address",
+          "XPath": "./div[@class='l-clearfix ph10 pt8 fz0']/a[@class='name']",
+          "Fun": "Attr",
+          "Param": "href"
+        },
+        {
+          "Name": "Gallery.Name",
+          "XPath": "./div[@class='l-clearfix ph10 pt8 fz0']/a[@class='name']/span",
+          "Fun": "Text",
+          "Param": ""
+        }
+      ]
+    },
+    {
+      "PageType": "BCY_AllPre",
+      "UseProxy": "false",
+      "Rules": [
+        {
+          "Name": "Gallery",
+          "XPath": "//ul[@id='imageCards']/li[@class='_box']",
+          "Fun": "Nodes",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Address",
+          "XPath": "./a",
+          "Fun": "Attr",
+          "Param": "href"
+        },
+        {
+          "Name": "Gallery.Originality",
+          "XPath": "",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Role",
+          "XPath": "",
+          "Fun": "Text",
+          "Param": ""
+        },
+        {
+          "Name": "Gallery.Title",
+          "XPath": "./div[@class='work-thumbnail__bd']/a",
+          "Fun": "Attr",
+          "Param": "title"
+        },
+        {
+          "Name": "Gallery.Picture",
+          "XPath": "./a/div[@class='posr']/img",
+          "Fun": "Attr",
+          "Param": "src"
+        },
+        {
+          "Name": "Gallery.Author.Address",
+          "XPath": "./div[@class='l-clearfix ph10 pt8 fz0']/a[@class='name']",
+          "Fun": "Attr",
+          "Param": "href"
+        },
+        {
+          "Name": "Gallery.Name",
+          "XPath": "./div[@class='l-clearfix ph10 pt8 fz0']/a[@class='name']/span",
+          "Fun": "Text",
+          "Param": ""
+        }
+      ]
+    }
+  ]
+}
